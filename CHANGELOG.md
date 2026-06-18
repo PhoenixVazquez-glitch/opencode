@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.2.0 (2026-06-18)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/PhoenixVazquez-glitch/opencode/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* **internal/types:** support eagerly validating pydantic iterators ([7616af5](https://github.com/PhoenixVazquez-glitch/opencode/commit/7616af512a2b85174cdde9cc1b0030b92ec3e294))
+
+
+### Bug Fixes
+
+* **auth:** prioritize first auth header ([44eff0f](https://github.com/PhoenixVazquez-glitch/opencode/commit/44eff0f5ad5230b03336fd03dbd39b9ef5a8460f))
+
 ## 0.1.0 (2026-05-09)
 
 Full Changelog: [v0.0.2...v0.1.0](https://github.com/PhoenixVazquez-glitch/opencode/compare/v0.0.2...v0.1.0)
