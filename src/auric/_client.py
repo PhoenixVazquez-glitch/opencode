@@ -144,9 +144,11 @@ class Auric(SyncAPIClient):
 
     @override
     def _auth_headers(self, security: SecurityOptions) -> dict[str, str]:
-        return {
-            **(self._api_key if security.get("api_key", False) else {}),
-        }
+        headers: dict[str, str] = {}
+        if security.get("api_key", False):
+            for key, value in self._api_key.items():
+                headers.setdefault(key, value)
+        return headers
 
     @property
     def _api_key(self) -> dict[str, str]:
@@ -347,9 +349,11 @@ class AsyncAuric(AsyncAPIClient):
 
     @override
     def _auth_headers(self, security: SecurityOptions) -> dict[str, str]:
-        return {
-            **(self._api_key if security.get("api_key", False) else {}),
-        }
+        headers: dict[str, str] = {}
+        if security.get("api_key", False):
+            for key, value in self._api_key.items():
+                headers.setdefault(key, value)
+        return headers
 
     @property
     def _api_key(self) -> dict[str, str]:
